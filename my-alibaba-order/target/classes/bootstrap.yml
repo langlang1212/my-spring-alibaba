@@ -1,0 +1,25 @@
+spring:
+  application:
+    # 服务逻辑名称
+    name: alibaba-order
+    #通用配置
+    allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      # 配置中心
+      config:
+        server-addr: 192.168.63.128:8848
+        file-extension: yml
+        refresh: true
+        shared-dataids: application-order.yml
+        namespace: 0fa75df2-f223-4899-aab0-e92dc7b61b67
+        username: zhanglang
+        password: zl12121111
+
+      # 注册中心
+      discovery:
+        server-addr: 192.168.63.128:8848
+        namespace: 0fa75df2-f223-4899-aab0-e92dc7b61b67
+        username: zhanglang
+        password: zl12121111

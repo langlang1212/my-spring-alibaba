@@ -1,0 +1,25 @@
+spring:
+  application:
+    # 服务逻辑名称
+    name: alibaba-order
+    #通用配置
+    allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      # 配置中心
+      config:
+        server-addr: @spring.application.cloud.nacos.config.server-addr@
+        file-extension: yml
+        refresh: true
+        shared-dataids: @spring.application.cloud.nacos.config.shared-dataids@
+        namespace: @spring.application.cloud.nacos.config.namespace@
+        username: @spring.application.cloud.nacos.config.username@
+        password: @spring.application.cloud.nacos.config.password@
+
+      # 注册中心
+      discovery:
+        server-addr: @spring.application.cloud.nacos.discovery.server-addr@
+        namespace: @spring.application.cloud.nacos.discovery.namespace@
+        username: @spring.application.cloud.nacos.discovery.username@
+        password: @spring.application.cloud.nacos.discovery.password@
