@@ -16,6 +16,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>my-alibaba-order</module>
+        <module>my-spring-gateway</module>
+        <module>my-alibaba-common</module>
+        <module>my-alibaba-sentinel-helloword</module>
     </modules>
 
     <properties>
